@@ -1,0 +1,249 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: raleway, arial, sans-serif;
+    font-size: 0.8em;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header, main, footer section {
+    width: 1335px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+@media  only screen and (max-width: 1440px)
+{
+    header, main, footer section {
+        width: 100%;
+    }
+}
+
+@media  only screen and (max-width: 768px)
+{
+    header, main, footer {
+        background-color: red;
+    }    
+}
+
+/*---------- HEADER ------------*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media  only screen and (max-width: 1440px)
+{
+    header, #introduction {
+        padding: 0 20px;
+    }
+}
+
+header p  {
+    margin: 0px;
+}
+
+header p img {
+    width: 94px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px; 
+}
+
+header nav ul li {
+    margin: 0px 0px 0px 70px;
+    list-style: none;
+}
+
+@media  only screen and (max-width: 1440px)
+{
+    header nav ul li {
+        margin: 0px 0px 0px 20px;
+        list-style: none;
+    }
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header nav ul li a:hover {
+    color: #0065fc;
+}
+
+/*--- INTRODUCTION ----*/
+
+#introduction {
+    margin: 0px;
+}
+
+#introduction h1 {
+    font-weight: 900;
+    margin: 0px;
+}
+
+#introduction p {
+    font-weight: 300;
+}
+
+#introduction form {
+    border: 1px solid #d9d9d9;
+    height: 50px;
+    width: 420px;
+    border-radius: 15px;
+}
+
+@media  only screen and (max-width: 768px)
+{
+    #introduction form {
+        width: 100%;
+    }   
+}
+
+#introduction .filtres {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+}
+
+#introduction .filtres p {
+    margin: 0px;
+}
+
+/*----------HEBERGEMENT --------*/
+
+section#hebergement {
+    display: flex;
+    flex-direction: row;
+}
+
+@media  only screen and (max-width: 768px)
+{
+    section#hebergement {
+        flex-direction: column-reverse;
+    } 
+}
+
+section#hebergement .marseille, section#hebergement .populaire {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section#hebergement div.marseille {
+    flex: 3;
+    margin-right: 40px;
+}
+
+@media  only screen and (max-width: 768px)
+{
+    section#hebergement div.marseille {
+        margin-right: 0px;
+    }
+    section#hebergement .marseille, section#hebergement .populaire {
+        border-radius: 0px;
+        flex-wrap: nowrap;
+        padding: 20px;
+    }
+}
+
+section#hebergement div.populaire {
+    flex: 1;
+}
+
+section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#hebergement p {
+    width: 30%;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin: 0px 0px 30px 0px;
+    padding: 13px;
+    background-color: white;
+}
+
+@media  only screen and (max-width: 768px)
+{
+    section#hebergement div.marseille {
+        flex: 1;
+    }
+    section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_02 {
+        flex-direction: column;
+    }
+    section#hebergement p {
+        width: 100%;
+    }
+}
+
+section#hebergement div .ligne_01 p .titre {
+    font-weight: 700;
+}
+
+section#hebergement div .ligne_01 p .prix {
+    font-weight: 400;
+}
+
+section#hebergement .etoiles .bleu,
+section#hebergement .etoiles .bleu {
+    color: #0065fc;
+}
+
+section#hebergement p .etoiles .grise,
+section#hebergement p .etoiles .grise {
+    color: #d9d9d9;
+}
+
+/*----------ACTIVITES --------*/
+
+/*---------- FOOTER ------------*/
+footer {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+}
+
+@media  only screen and (max-width: 768px)
+{
+    footer section {
+        flex-direction: column;
+    }  
+}
+
+footer section div h3 {
+    font-weight: 600;
+}
+
+footer section div ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer section div ul li {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    list-style: none;
+}
