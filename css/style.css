@@ -15,21 +15,15 @@ header, main, footer section {
     box-sizing: border-box;
 }
 
-@media  only screen and (max-width: 1440px)
-{
-    header, main, footer section {
-        width: 100%;
-    }
+@media  only screen and (max-width: 1440px){
+    header, main, footer section { width: 100%; }
 }
 
-@media  only screen and (max-width: 768px)
-{
-    header, main, footer {
-        background-color: red;
-    }    
+@media  only screen and (max-width: 1440px) and (min-width: 768px){
+    main, header { padding: 0 20px;}
 }
 
-/*---------- HEADER ------------*/
+/*-------------------------------- HEADER ----------------------------------*/
 
 header {
     display: flex;
@@ -37,55 +31,110 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-@media  only screen and (max-width: 1440px)
-{
-    header, #introduction {
-        padding: 0 20px;
-    }
+@media  only screen and (max-width: 1440px) {
+    header { margin: 0px 0px 35px 0px; }
 }
 
 header p  {
     margin: 0px;
 }
 
+@media  only screen and (max-width: 768px) {
+    header p  {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
+
 header p img {
     width: 94px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0px; 
+}
+
+@media  only screen and (max-width: 768px) {
+    header nav { 
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin: 20px 0px 0px 0;
+    }
 }
 
 header nav ul {
     display: flex;
     flex-direction: row;
-    margin: 0px; 
+    flex-wrap: nowrap;
+    margin: 0px;
+    padding: 0px;
 }
 
-header nav ul li {
+
+@media  only screen and (max-width: 768px)
+{
+    header nav, header nav ul { 
+        width: 100%;
+        padding: 0px;
+    }
+    header nav ul { 
+        border-bottom: 3px solid #d9d9d9;
+    }
+    header nav ul li { 
+        width: 50%;
+        text-align: center;
+    }
+}
+
+header nav ul li, header nav a {
     margin: 0px 0px 0px 70px;
     list-style: none;
 }
 
-@media  only screen and (max-width: 1440px)
+@media  only screen and (max-width: 768px)
 {
-    header nav ul li {
-        margin: 0px 0px 0px 20px;
+    header nav a.inscription {
+        margin: 20px 20px 40px 20px;
         list-style: none;
+    }
+    header nav ul li, header nav ul li a {
+        margin: 0px;
     }
 }
 
 header nav ul li a {
+    color: black;
+    font-weight: 300;
     text-decoration: none;
-    color: #000;
 }
 
-header nav ul li a:hover {
+header nav a.inscription {
+    color: #0065fc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header nav a:hover {
     color: #0065fc;
 }
 
-/*--- INTRODUCTION ----*/
+/*-------------------------------- INTRODUCTION ----------------------------------*/
 
 #introduction {
-    margin: 0px;
+    margin: 0px 0px 40px 0px;
+}
+
+@media  only screen and (max-width: 768px){
+    #introduction, #activite { padding: 0 20px; }
 }
 
 #introduction h1 {
@@ -104,11 +153,8 @@ header nav ul li a:hover {
     border-radius: 15px;
 }
 
-@media  only screen and (max-width: 768px)
-{
-    #introduction form {
-        width: 100%;
-    }   
+@media  only screen and (max-width: 768px){
+    #introduction form { width: 100%; }   
 }
 
 #introduction .filtres {
@@ -121,21 +167,29 @@ header nav ul li a:hover {
     margin: 0px;
 }
 
-/*----------HEBERGEMENT --------*/
+/*-------------------------------- HEBERGEMENT ----------------------------------*/
 
 section#hebergement {
     display: flex;
     flex-direction: row;
+    margin-bottom: 65px;
 }
 
-@media  only screen and (max-width: 768px)
-{
-    section#hebergement {
-        flex-direction: column-reverse;
-    } 
+@media  only screen and (max-width: 1024px){
+    section#hebergement { flex-direction: column-reverse; } 
 }
 
-section#hebergement .marseille, section#hebergement .populaire {
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille, section#hebergement .populaire {
+        border-radius: 0px !important;
+        flex-wrap: nowrap;
+        padding: 20px !important;
+    }
+}
+
+/*--------- HEBERGEMENT  MARSEILLE---------*/
+
+section#hebergement .marseille{
     background-color: #f2f2f2;
     border-radius: 15px;
     padding: 40px;
@@ -144,25 +198,9 @@ section#hebergement .marseille, section#hebergement .populaire {
     flex-wrap: wrap;
 }
 
-section#hebergement div.marseille {
+section#hebergement .marseille {
     flex: 3;
     margin-right: 40px;
-}
-
-@media  only screen and (max-width: 768px)
-{
-    section#hebergement div.marseille {
-        margin-right: 0px;
-    }
-    section#hebergement .marseille, section#hebergement .populaire {
-        border-radius: 0px;
-        flex-wrap: nowrap;
-        padding: 20px;
-    }
-}
-
-section#hebergement div.populaire {
-    flex: 1;
 }
 
 section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_02 {
@@ -171,33 +209,87 @@ section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_
     justify-content: space-between;
 }
 
-section#hebergement p {
-    width: 30%;
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille .ligne_01, 
+    section#hebergement .marseille .ligne_02 {
+        flex-direction: column;
+    }
+}
+
+section#hebergement .marseille div.hebergement_01, section#hebergement .populaire div.populaire_01 {
     border: 5px solid white;
     border-radius: 15px;
     margin: 0px 0px 30px 0px;
-    padding: 13px;
-    background-color: white;
+    background-image: url(../images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-@media  only screen and (max-width: 768px)
-{
-    section#hebergement div.marseille {
-        flex: 1;
+section#hebergement .marseille a { 
+    width: 28%;
+    text-decoration: none;
+}
+
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille div.hebergement_01 {
+        width: 100%;
     }
-    section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_02 {
-        flex-direction: column;
-    }
-    section#hebergement p {
+    section#hebergement .marseille a { 
         width: 100%;
     }
 }
 
-section#hebergement div .ligne_01 p .titre {
+@media  only screen and (max-width: 1024px) {
+    section#hebergement div.marseille { margin-right: 0px; flex: 1;}
+}
+
+/*--------- HEBERGEMENT  POPULAIRE ---------*/
+
+section#hebergement .populaire div.populaire_01 { width: 100%; }
+
+section#hebergement .populaire {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    section#hebergement .populaire {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    section#hebergement .populaire h2 {width: 100%;}
+    section#hebergement .populaire div.populaire_01 { width: 28%; }
+}
+
+section#hebergement div.populaire {
+    flex: 1;
+}
+
+section#hebergement div.ligne_01 p,
+section#hebergement div.ligne_02 p,
+section#hebergement div.populaire p  {
+    background-color: white;
+    padding: 13px;
+    margin: 0px;
+}
+
+section#hebergement p .titre {
     font-weight: 700;
 }
 
-section#hebergement div .ligne_01 p .prix {
+section#hebergement p .prix {
     font-weight: 400;
 }
 
@@ -211,12 +303,13 @@ section#hebergement p .etoiles .grise {
     color: #d9d9d9;
 }
 
-/*----------ACTIVITES --------*/
+/*-------------------------------- ACTIVITE ----------------------------------*/
 
-/*---------- FOOTER ------------*/
+/*-------------------------------- FOOTER ----------------------------------*/
 footer {
     width: 100%;
     background-color: #f2f2f2;
+    margin-top: 50px;
 }
 
 footer section {
@@ -224,13 +317,17 @@ footer section {
     flex-direction: row;
     justify-content: space-between;
     background-color: #f2f2f2;
+    padding: 0px;
 }
 
-@media  only screen and (max-width: 768px)
-{
+@media  only screen and (max-width: 1440px) {
     footer section {
-        flex-direction: column;
-    }  
+        padding: 20px;
+    } 
+}
+
+@media  only screen and (max-width: 768px) {
+    footer section { flex-direction: column; }  
 }
 
 footer section div h3 {
