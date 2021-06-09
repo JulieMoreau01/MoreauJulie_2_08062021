@@ -31,13 +31,14 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: 130px;
 }
 
 @media  only screen and (max-width: 1440px) {
-    header { margin: 0px 0px 35px 0px; }
+    header { margin: 35px 0px 35px 0px; height: 100%; }
 }
+
+/*--------- HEADER LOGO---------*/
 
 header p  {
     margin: 0px;
@@ -46,7 +47,7 @@ header p  {
 @media  only screen and (max-width: 768px) {
     header p  {
         position: absolute;
-        top: 20px;
+        top: 33px;
         left: 20px;
     }
 }
@@ -55,11 +56,14 @@ header p img {
     width: 94px;
 }
 
+/*--------- HEADER NAV---------*/
+
 header nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 0px; 
+    height: 100%;
 }
 
 @media  only screen and (max-width: 768px) {
@@ -67,7 +71,7 @@ header nav {
         flex-direction: column-reverse;
         flex-wrap: wrap;
         align-items: flex-end;
-        margin: 20px 0px 0px 0;
+        margin: 0px 0px 0px 0px;
     }
 }
 
@@ -77,54 +81,84 @@ header nav ul {
     flex-wrap: nowrap;
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 
-
-@media  only screen and (max-width: 768px)
-{
-    header nav, header nav ul { 
-        width: 100%;
-        padding: 0px;
-    }
-    header nav ul { 
-        border-bottom: 3px solid #d9d9d9;
-    }
-    header nav ul li { 
-        width: 50%;
-        text-align: center;
-    }
-}
-
-header nav ul li, header nav a {
-    margin: 0px 0px 0px 70px;
+header nav ul li {
+    margin: 0px 70px 0px 0px;
     list-style: none;
+    border-top: 3px solid white;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-@media  only screen and (max-width: 768px)
-{
-    header nav a.inscription {
-        margin: 20px 20px 40px 20px;
-        list-style: none;
-    }
-    header nav ul li, header nav ul li a {
-        margin: 0px;
-    }
+header nav ul li:hover {
+    border-top: 3px solid #0065fc;
 }
 
 header nav ul li a {
     color: black;
+    font-size: 1.25em;
     font-weight: 300;
     text-decoration: none;
+    margin-bottom: 22px;
+}
+
+header nav ul li a:hover {
+    color: #0065fc;
+}
+
+
+@media  only screen and (max-width: 768px) {
+    header nav, header nav ul { 
+        width: 100%;
+        padding: 0px;
+        height: unset;
+    }
+    header nav ul li { 
+        border-bottom: 3px solid #d9d9d9;
+        width: 50%;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        padding-bottom: 15px;
+        cursor: pointer;
+        border-top: none;
+        display: unset;
+    }
+    header nav ul li:hover {
+        margin: 0px 0px 0px 0px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #0065fc;
+        border-top: none;
+    }
+    header nav ul li a {
+        margin-bottom: 0px;
+    }
+    header nav ul li:hover a {
+        color: #0065fc;
+    }
 }
 
 header nav a.inscription {
     color: #0065fc;
     font-weight: 600;
     text-decoration: none;
+    margin-right: 25px;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid white;
+    padding-bottom: 22px;
 }
 
-header nav a:hover {
-    color: #0065fc;
+@media  only screen and (max-width: 768px) {
+    header nav a.inscription {
+        margin: 7px 20px 30px 20px;
+        list-style: none;
+        padding-bottom: 0px;
+        border-top: none;
+    }
 }
 
 /*-------------------------------- INTRODUCTION ----------------------------------*/
