@@ -172,33 +172,172 @@ header nav a.inscription {
 }
 
 #introduction h1 {
-    font-weight: 900;
+    font-weight: 700;
     margin: 0px;
+    font-size: 1.7em;
 }
 
-#introduction p {
+#introduction p.intro {
     font-weight: 300;
+    font-size: 1.25em;
+    margin: 06px 0px 20px 0px;
 }
+
+/*--------- INTRODUCTION  FORM RECHERCHE---------*/
 
 #introduction form {
-    border: 1px solid #d9d9d9;
-    height: 50px;
+    height: 48px;
     width: 420px;
     border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 @media  only screen and (max-width: 768px){
     #introduction form { width: 100%; }   
 }
 
+#introduction form p  {
+    margin: 0px;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+}
+
+#introduction form p i {
+    margin: 18px;
+    font-size: 1.3em;
+}
+
+#introduction form input[type="text"] {
+    height: 46px;
+    border: none;
+    flex: 3;
+}
+
+#introduction form button.desktop, #introduction form button.phone {
+    height: 50px;
+    border: none;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 1.45em;
+    font-weight: 500;
+    font-weight: 400;
+    padding: 0px 17px;
+}
+
+#introduction form button.phone {
+    display: none;
+}
+
+@media  only screen and (max-width: 768px) {
+    #introduction form button.phone {
+        display: block;
+        border-radius: 15px;
+    }
+    #introduction form button.desktop {
+        display: none;
+    }
+}
+
+/*--------- INTRODUCTION FILTRE ---------*/
+
 #introduction .filtres {
     display: flex;
     flex-direction: row;
-    margin: 30px 0px;
+    margin: 30px 0px 20px 0px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#introduction .filtres p {
-    margin: 0px;
+
+#introduction .filtres p.titre {
+    font-weight: 600;
+    font-size: 1.4em;
+    margin: 0px 33px 0px 10px;
+}
+
+@media  only screen and (max-width: 768px) {
+    #introduction .filtres p.titre {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+}
+
+#introduction .filtres div {
+    height: 46px;
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    border-right: 2px solid #d9d9d9;
+    border-left: none;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#introduction .filtres div:hover {
+    border-top: 2px solid #deebff;
+    border-bottom: 2px solid #deebff;
+    border-right: 2px solid #deebff;
+    background-color: #deebff;
+    transition: 0.8s;
+    box-shadow: 2px 2px 2px #d9d9d9;
+}
+
+#introduction .filtres div:not(:hover) {
+    transition: 0.8s;
+}
+
+#introduction .filtres p.icone {
+    margin: 0px 0px 0px 0px;
+    background-color: #deebff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#introduction .filtres p.icone i {
+    color: #0065fc;
+    font-size: 1.3em;
+}
+
+#introduction .filtres div p.texte {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0px 25px 0 15px;
+    white-space: nowrap;
+}
+
+p.resultat {
+    font-weight: 300;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+p.resultat span {
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 14px 0px 5px;
+}
+
+p.resultat span i {
+    color: #0065fc;
+    font-size: 0.75em;
 }
 
 /*-------------------------------- HEBERGEMENT ----------------------------------*/

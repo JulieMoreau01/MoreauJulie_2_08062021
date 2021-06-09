@@ -26,22 +26,27 @@
         <main>
             <section id="introduction">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre ville ou en pleine nature</p>
+                <p class="intro">En plein centre ville ou en pleine nature</p>
                 
                 <!--/MOTEUR DE RECHERCHE-->
-                <form></form>
+                <form>
+                    <p><i class="fas fa-map-marker-alt"></i></p>
+                    <input type="text" name="recherche" id="recherche" />
+                    <button type="submit" class="desktop">Rechercher</button>
+                    <button type="submit" class="phone"><i class="fas fa-search"></i></button>
+                </form>
                 
                 <!-- FILTRES -->
                 <div class="filtres">
-                    <p>Filtres</p>
-                    <div>Economique</div>
-                    <div>Familial</div>
-                    <div>Romantique</div>
-                    <div>Animaux autorisés</div>
+                    <p class="titre">Filtres</p>
+                    <div><p class="icone"><i class="fas fa-money-bill-wave"></i></p><p class="texte">Economique</p></div>
+                    <div><p class="icone"><i class="fas fa-child"></i></p><p class="texte">Familial</p></div>
+                    <div><p class="icone"><i class="fas fa-heart"></i></p><p class="texte">Romantique</p></div>
+                    <div><p class="icone"><i class="fas fa-dog"></i></p><p class="texte">Animaux autorisés</p></div>
                 </div>
 
-                <!--Nombde de Résultat-->
-                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                <!--Nombre de Résultat-->
+                <p class="resultat"><span><i class="fas fa-info"></i></span>Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
 
             <section id="hebergement">
