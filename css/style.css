@@ -10,7 +10,7 @@ body {
 }
 
 header, main, footer section {
-    width: 1335px;
+    width: 1340px;
     margin: auto;
     box-sizing: border-box;
 }
@@ -346,124 +346,101 @@ section#hebergement {
     display: flex;
     flex-direction: row;
     margin-bottom: 65px;
+    justify-content: space-between;
 }
 
 @media  only screen and (max-width: 1024px){
     section#hebergement { flex-direction: column-reverse; } 
 }
 
-@media  only screen and (max-width: 768px) {
-    section#hebergement .marseille, section#hebergement .populaire {
-        border-radius: 0px !important;
-        flex-wrap: nowrap;
+/*--------- HEBERGEMENT  MARSEILLE AND POPULAIRE COMMUN ---------*/
+
+section#hebergement .marseille, 
+section#hebergement .populaire {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 43px 39px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+section#hebergement .marseille {
+    width: 66%;
+    /*margin-right: 4%;*/
+}
+
+section#hebergement .populaire {
+    width: 32%;
+}
+
+@media  only screen and (max-width: 1024px) {
+    section#hebergement .marseille, 
+    section#hebergement .populaire {
+        width: 100%;
+        margin-right: 0px;
         padding: 20px !important;
     }
 }
 
-/*--------- HEBERGEMENT  MARSEILLE---------*/
-
-section#hebergement .marseille{
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-section#hebergement .marseille {
-    flex: 3;
-    margin-right: 40px;
-}
-
-section#hebergement .marseille .ligne_01, section#hebergement .marseille .ligne_02 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille .ligne_01, 
-    section#hebergement .marseille .ligne_02 {
-        flex-direction: column;
+    section#hebergement .marseille, 
+    section#hebergement .populaire {
+        border-radius: 0px !important;
+        flex-wrap: nowrap;
     }
 }
 
-section#hebergement .marseille div.hebergement_01, section#hebergement .populaire div.populaire_01 {
-    border: 5px solid white;
-    border-radius: 15px;
-    margin: 0px 0px 30px 0px;
-    background-image: url(../images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
-    height: 200px;
+section#hebergement h2 {
+    font-size: 1.7em;
+    margin: 0px 0px 24px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#hebergement .marseille a, 
+section#hebergement .populaire a {
+    margin-bottom: 33px;
+}
+
+section#hebergement .populaire a:last-child {
+    margin-bottom: 0px;
+}
+
+section#hebergement .marseille .ligne_01 div,
+section#hebergement .marseille .ligne_02 div,
+section#hebergement .populaire div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
-    width: 100%;
 }
 
-section#hebergement .marseille a { 
-    width: 28%;
-    text-decoration: none;
-}
-
-@media  only screen and (max-width: 768px) {
-    section#hebergement .marseille div.hebergement_01 {
-        width: 100%;
-    }
-    section#hebergement .marseille a { 
-        width: 100%;
-    }
-}
-
-@media  only screen and (max-width: 1024px) {
-    section#hebergement div.marseille { margin-right: 0px; flex: 1;}
-}
-
-/*--------- HEBERGEMENT  POPULAIRE ---------*/
-
-section#hebergement .populaire div.populaire_01 { width: 100%; }
-
-section#hebergement .populaire {
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    section#hebergement .populaire {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 30px;
-    }
-    section#hebergement .populaire h2 {width: 100%;}
-    section#hebergement .populaire div.populaire_01 { width: 28%; }
-}
-
-section#hebergement div.populaire {
-    flex: 1;
-}
-
-section#hebergement div.ligne_01 p,
-section#hebergement div.ligne_02 p,
-section#hebergement div.populaire p  {
+section#hebergement .marseille div  p,
+section#hebergement .populaire div p {
     background-color: white;
-    padding: 13px;
     margin: 0px;
+    color: black;
+    border-radius: 0px 0px 15px 15px;
 }
 
 section#hebergement p .titre {
     font-weight: 700;
+    font-size: 1.25em;
+    margin-bottom: 6px;
+    display: block;
 }
 
 section#hebergement p .prix {
     font-weight: 400;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.1em;
+}
+
+section#hebergement .etoiles {
+    font-size: 0.9em;
 }
 
 section#hebergement .etoiles .bleu,
@@ -476,7 +453,158 @@ section#hebergement p .etoiles .grise {
     color: #d9d9d9;
 }
 
+/*--------- HEBERGEMENT  MARSEILLE---------*/
+
+section#hebergement .marseille .ligne_01, 
+section#hebergement .marseille .ligne_02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille .ligne_01, 
+    section#hebergement .marseille .ligne_02 {
+        flex-direction: column;
+    }
+}
+
+section#hebergement .marseille .ligne_01 div, 
+section#hebergement .marseille .ligne_02 div {
+    height: 200px;
+    width: 100%;
+}
+
+section#hebergement .marseille .ligne_01 div img,
+section#hebergement .marseille .ligne_02 div img {
+    width: 100%;
+    height: 119px;
+    object-fit: cover;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: none;
+    border-radius: 15px 15px 0px 0px;
+    box-sizing: border-box;
+}
+
+section#hebergement .marseille a { 
+    flex-basis: 30%;
+    text-decoration: none;
+}
+
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille div {
+        width: 100%;
+    }
+    section#hebergement .marseille a { 
+        width: 100%;
+    }
+}
+
+@media  only screen and (max-width: 1024px) {
+    section#hebergement .marseille { margin-right: 0px; width: 100%;}
+}
+
+section#hebergement .marseille p {
+    padding: 7px 12px 9px 17px;
+}
+
+.link-bottom {
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.link-bottom a {
+    font-size: 1.3em;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0px !important;
+}
+
+/*--------- HEBERGEMENT  POPULAIRE ---------*/
+
+section#hebergement .populaire a { width: 100%; text-decoration: none; }
+
+section#hebergement .populaire div {
+    height: 144px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+section#hebergement .populaire div img {
+    min-width: 128px;
+    height: 144px;
+    object-fit: cover;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    border-radius: 15px 0px 0px 15px;
+    box-sizing: border-box;
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    section#hebergement .populaire h2 {width: 100%;}
+    section#hebergement .populaire a { width: 32%; }
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    section#hebergement .populaire {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+}
+
+section#hebergement div.populaire p  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 40px 9px 21px;
+    box-sizing: border-box;
+    border-radius: 0px 15px 15px 0px;
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    section#hebergement div.populaire p  {
+        padding: 10px;
+    }
+}
+
+@media  only screen and (max-width: 768px) {
+    section#hebergement div.populaire p  {
+        width: 100%;
+    }
+}
+
+section#hebergement .populaire .etoiles {
+    margin-top: auto;
+}
+
+
 /*-------------------------------- ACTIVITE ----------------------------------*/
+
+#activite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#activite h2 {
+    width: 100%;
+}
+
+#activite div {
+    background-image: url(../images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+    flex: 1;
+}
 
 /*-------------------------------- FOOTER ----------------------------------*/
 footer {
