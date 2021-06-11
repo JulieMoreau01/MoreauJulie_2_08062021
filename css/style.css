@@ -37,7 +37,7 @@ header {
     height: 130px;
 }
 
-@media  only screen and (max-width: 1440px) {
+@media  only screen and (max-width: 768px) {
     header { margin: 35px 0px 35px 0px; height: 100%; }
 }
 
@@ -214,21 +214,31 @@ header nav a.inscription {
 }
 
 #introduction form input[type="text"] {
-    height: 46px;
+    height: 48px;
     border: none;
     flex: 3;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 0px 0px 0px 17px;
+    box-sizing: border-box;
+}
+
+#introduction form input[type="text"]::placeholder {
+    font-weight: 400;
+    color: grey;
 }
 
 #introduction form button.desktop, #introduction form button.phone {
-    height: 50px;
+    height: 48px;
     border: none;
     background-color: #0065fc;
     color: white;
     border-radius: 0px 15px 15px 0px;
-    font-size: 1.45em;
+    font-size: 1.5em;
     font-weight: 500;
     font-weight: 400;
     padding: 0px 17px;
+    cursor: pointer;
 }
 
 #introduction form button.phone {
@@ -259,7 +269,7 @@ header nav a.inscription {
 #introduction .filtres p.titre {
     font-weight: 600;
     font-size: 1.4em;
-    margin: 0px 33px 0px 10px;
+    margin: 0px 33px 15px 10px;
 }
 
 @media  only screen and (max-width: 768px) {
@@ -361,7 +371,7 @@ section#hebergement {
 section#hebergement .marseille, 
 section#hebergement .populaire {
     background-color: #f2f2f2;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 43px 39px;
     display: flex;
     flex-direction: column;
@@ -369,14 +379,8 @@ section#hebergement .populaire {
     box-sizing: border-box;
 }
 
-section#hebergement .marseille {
-    width: 66%;
-    /*margin-right: 4%;*/
-}
-
-section#hebergement .populaire {
-    width: 32%;
-}
+section#hebergement .marseille { width: 65.5%; }
+section#hebergement .populaire { width: 31.5%; }
 
 @media  only screen and (max-width: 1024px) {
     section#hebergement .marseille, 
@@ -401,40 +405,40 @@ section#hebergement h2 {
     justify-content: space-between;
 }
 
-section#hebergement .marseille a, 
-section#hebergement .populaire a {
-    margin-bottom: 33px;
-}
-
-section#hebergement .populaire a:last-child {
-    margin-bottom: 0px;
-}
-
-section#hebergement .marseille .ligne_01 div,
-section#hebergement .marseille .ligne_02 div,
-section#hebergement .populaire div {
+section#hebergement .marseille .ligne_01 figure,
+section#hebergement .marseille .ligne_02 figure,
+section#hebergement .populaire figure {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
+    margin: 0px 0px 30px 0px;
 }
 
-section#hebergement .marseille div  p,
-section#hebergement .populaire div p {
+section#hebergement .marseille figure figcaption,
+section#hebergement .populaire figure figcaption {
     background-color: white;
     margin: 0px;
     color: black;
-    border-radius: 0px 0px 15px 15px;
 }
 
-section#hebergement p .titre {
+section#hebergement .marseille figure figcaption a,
+section#hebergement .populaire figure figcaption a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+section#hebergement figcaption .titre {
     font-weight: 700;
     font-size: 1.25em;
     margin-bottom: 6px;
     display: block;
 }
 
-section#hebergement p .prix {
+section#hebergement figcaption .prix {
     font-weight: 400;
     display: block;
     margin-bottom: 6px;
@@ -442,7 +446,7 @@ section#hebergement p .prix {
 }
 
 section#hebergement .etoiles {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 section#hebergement .etoiles .bleu,
@@ -450,8 +454,8 @@ section#hebergement .etoiles .bleu {
     color: #0065fc;
 }
 
-section#hebergement p .etoiles .grise,
-section#hebergement p .etoiles .grise {
+section#hebergement figcaption .etoiles .grise,
+section#hebergement figcaption .etoiles .grise {
     color: #d9d9d9;
 }
 
@@ -471,14 +475,22 @@ section#hebergement .marseille .ligne_02 {
     }
 }
 
-section#hebergement .marseille .ligne_01 div, 
-section#hebergement .marseille .ligne_02 div {
+section#hebergement .marseille .ligne_01 figure, 
+section#hebergement .marseille .ligne_02 figure {
     height: 200px;
     width: 100%;
+    flex-basis: 31%;
 }
 
-section#hebergement .marseille .ligne_01 div img,
-section#hebergement .marseille .ligne_02 div img {
+
+section#hebergement  .marseille figure a {
+    display: inline-block;
+    width: 100%;
+    height: 119px;
+}
+
+section#hebergement .marseille .ligne_01 figure a img,
+section#hebergement .marseille .ligne_02 figure a img {
     width: 100%;
     height: 119px;
     object-fit: cover;
@@ -486,20 +498,12 @@ section#hebergement .marseille .ligne_02 div img {
     border-right: 5px solid white;
     border-left: 5px solid white;
     border-bottom: none;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     box-sizing: border-box;
 }
 
-section#hebergement .marseille a { 
-    flex-basis: 30%;
-    text-decoration: none;
-}
-
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille div {
-        width: 100%;
-    }
-    section#hebergement .marseille a { 
+    section#hebergement .marseille figure {
         width: 100%;
     }
 }
@@ -508,7 +512,11 @@ section#hebergement .marseille a {
     section#hebergement .marseille { margin-right: 0px; width: 100%;}
 }
 
-section#hebergement .marseille p {
+section#hebergement .marseille figcaption {
+    border-radius: 0px 0px 20px 20px;
+}
+
+section#hebergement .marseille figcaption a {
     padding: 7px 12px 9px 17px;
 }
 
@@ -518,7 +526,7 @@ section#hebergement .marseille p {
 }
 
 .link-bottom a {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 700;
     text-decoration: none;
     color: black;
@@ -527,9 +535,7 @@ section#hebergement .marseille p {
 
 /*--------- HEBERGEMENT  POPULAIRE ---------*/
 
-section#hebergement .populaire a { width: 100%; text-decoration: none; }
-
-section#hebergement .populaire div {
+section#hebergement .populaire figure {
     height: 144px;
     width: 100%;
     display: flex;
@@ -538,7 +544,16 @@ section#hebergement .populaire div {
     box-sizing: border-box;
 }
 
-section#hebergement .populaire div img {
+section#hebergement .populaire figure:last-child {
+    margin-bottom: 0px;
+}
+
+section#hebergement .populaire figure a  {
+    min-width: 128px;
+    height: 144px;
+}
+
+section#hebergement .populaire figure img {
     min-width: 128px;
     height: 144px;
     object-fit: cover;
@@ -546,13 +561,13 @@ section#hebergement .populaire div img {
     border-right: 5px solid white;
     border-left: 5px solid white;
     border-bottom: 5px solid white;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 20px 0px 0px 20px;
     box-sizing: border-box;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
     section#hebergement .populaire h2 {width: 100%;}
-    section#hebergement .populaire a { width: 32%; }
+    section#hebergement .populaire figure { width: 32%; }
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -563,24 +578,33 @@ section#hebergement .populaire div img {
     }
 }
 
-section#hebergement div.populaire p  {
+section#hebergement .populaire figcaption {
     height: 100%;
     width: 100%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+section#hebergement .populaire figcaption a {
+    padding: 14px 40px 9px 21px;
     display: flex;
     flex-direction: column;
-    padding: 14px 40px 9px 21px;
     box-sizing: border-box;
-    border-radius: 0px 15px 15px 0px;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    section#hebergement div.populaire p  {
+    section#hebergement .populaire figcaption a {
         padding: 10px;
     }
 }
 
+@media  only screen and (min-width: 1024px) and (max-width: 1440px) {
+    section#hebergement .populaire figcaption a {
+        padding: 14px 21px 9px 21px;
+    }
+}
+
 @media  only screen and (max-width: 768px) {
-    section#hebergement div.populaire p  {
+    section#hebergement .populaire figcaption  {
         width: 100%;
     }
 }
@@ -612,86 +636,114 @@ section#hebergement .populaire .etoiles {
     width: 100%;
 }
 
+#activite figure {
+    margin: 0px;
+}
+
 @media  only screen and (min-width: 1440px) {
-    
-    .block1, .colonne, .block4 {
+    #activite .block1, 
+    #activite .colonne, 
+    #activite .block4 {
         min-width: 300px;
         width: 300px;
     }
 }
 
-.block1, .colonne, .block4 {
+#activite .block1, 
+#activite .colonne, 
+#activite .block4 {
     height: 446px;
     flex-basis: 23%;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    .block1, .colonne, .block4 {
-        height: 416px;
-        flex-basis: 23%;
+    #activite .block1, 
+    #activite .colonne, 
+    #activite .block4 {
+    height: 416px;
+    flex-basis: 22.5%;
     }
 }
 
-.colonne {
+#activite .colonne {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     object-fit: cover;
 }
 
-.block1, .block2, .block3, .block4, .block5, .block6 {
-    border-radius: 15px;
+#activite figure {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 3px 3px 10px #e9e7e7;
 }
 
-.block2, .block5 {
+#activite .block2, 
+#activite .block5 {
     margin-bottom: 44px;
 }
 
 @media  only screen and (max-width: 1024px) {
-    .block2, .block5 {
+    #activite .block2, 
+    #activite .block5 {
         margin-bottom: 25px;
     }
 }
 
 @media  only screen and (max-width: 768px) {
-    .block1, .block2, .block3, .block4, .block5, .block6 {
+    #activite .block1, 
+    #activite .block2, 
+    #activite .block3, 
+    #activite .block4, 
+    #activite .block5, 
+    #activite .block6 {
         margin-bottom: 25px;
     }
 }
 
-.block1 img, .block2 img, .block3 img, .block4 img, .block5 img, .block6 img {
+#activite a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+#activite figure img,
+#activite figure a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
-.block2 img {
+#activite .block2 img {
     max-height: 180px;
 }
 
-.block3 img {
+#activite .block3 img {
     max-height: 108px;
 }
 
-.block5 img{
+#activite .block5 img {
     max-height: 138px;
 }
 
-.block6 img{
+#activite .block6 img {
     max-height: 152px;
 }
 
 @media  only screen and (max-width: 768px) {
-    .block1 img, .block2 img, .block3 img, .block4 img, .block5 img, .block6 img {
+    #activite figure img,
+    #activite figure a {
         max-height: 132px;
     }
 }
 
-.block1 p, .block2 p, .block3 p, .block4 p, .block5 p, .block6 p {
+#activite figure figcaption {
+    border-radius: 0px 0px 20px 20px;
+}
+
+#activite figure figcaption a {
     background-color: white;
     font-size: 1.2em;
     font-weight: 700;
@@ -699,11 +751,10 @@ section#hebergement .populaire .etoiles {
     justify-content: start;
     align-items: center;
     padding-left: 18px;
+    height: 56px;
+    border-radius: 0px 0px 15px 15px;
+    box-sizing: border-box;
 }
-
-
-
-
 
 /*-------------------------------- FOOTER ----------------------------------*/
 footer {
