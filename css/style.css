@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 html {
     font-size: 100%;
 }
@@ -6,13 +8,11 @@ body {
     font-family: raleway, arial, sans-serif;
     font-size: 0.8em;
     margin: 0px;
-    box-sizing: border-box;
 }
 
 header, main, footer section {
     width: 1340px;
     margin: auto;
-    box-sizing: border-box;
 }
 
 @media  only screen and (max-width: 1440px){
@@ -23,8 +23,7 @@ header, main, footer section {
     main, header { padding: 0 20px;}
 }
 
-h2 {
-    font-size: 1.7em;}
+h2 { font-size: 1.7em; }
 
 /*-------------------------------- HEADER ----------------------------------*/
 
@@ -38,7 +37,7 @@ header {
 }
 
 @media  only screen and (max-width: 768px) {
-    header { margin: 35px 0px 35px 0px; height: 100%; }
+    header { margin: 35px 0px 30px 0px; height: 100%; }
 }
 
 /*--------- HEADER LOGO---------*/
@@ -88,7 +87,8 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0px 70px 0px 0px;
+    margin: 0px 22px 0px 0px;
+    padding: 0px 23px;
     list-style: none;
     border-top: 3px solid white;
     height: 100%;
@@ -124,7 +124,7 @@ header nav ul li a:hover {
         width: 50%;
         text-align: center;
         margin: 0px 0px 0px 0px;
-        padding-bottom: 15px;
+        padding: 0px 0px 15px 0px;
         cursor: pointer;
         border-top: none;
         display: unset;
@@ -148,6 +148,7 @@ header nav a.inscription {
     font-weight: 600;
     text-decoration: none;
     margin-right: 25px;
+    margin-left: 25px;
     font-size: 1.25em;
     display: flex;
     align-items: center;
@@ -157,7 +158,7 @@ header nav a.inscription {
 
 @media  only screen and (max-width: 768px) {
     header nav a.inscription {
-        margin: 7px 20px 30px 20px;
+        margin: 7px 20px 37px 20px;
         list-style: none;
         padding-bottom: 0px;
         border-top: none;
@@ -183,13 +184,13 @@ header nav a.inscription {
 #introduction p.intro {
     font-weight: 300;
     font-size: 1.25em;
-    margin: 06px 0px 20px 0px;
+    margin: 14px 0px 35px 0px;
 }
 
 /*--------- INTRODUCTION  FORM RECHERCHE---------*/
 
 #introduction form {
-    height: 48px;
+    height: 51px;
     width: 420px;
     border-radius: 15px;
     display: flex;
@@ -214,13 +215,11 @@ header nav a.inscription {
 }
 
 #introduction form input[type="text"] {
-    height: 48px;
     border: none;
     flex: 3;
     font-size: 1.4em;
     font-weight: 700;
     padding: 0px 0px 0px 17px;
-    box-sizing: border-box;
 }
 
 #introduction form input[type="text"]::placeholder {
@@ -229,7 +228,6 @@ header nav a.inscription {
 }
 
 #introduction form button.desktop, #introduction form button.phone {
-    height: 48px;
     border: none;
     background-color: #0065fc;
     color: white;
@@ -280,7 +278,7 @@ header nav a.inscription {
 }
 
 #introduction .filtres div {
-    height: 46px;
+    height: 50px;
     border-top: 2px solid #d9d9d9;
     border-bottom: 2px solid #d9d9d9;
     border-right: 2px solid #d9d9d9;
@@ -289,8 +287,14 @@ header nav a.inscription {
     display: flex;
     align-items: center;
     margin-right: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     cursor: pointer;
+}
+
+@media  only screen and (max-width: 768px) {
+    #introduction .filtres div {
+        margin-right: 10px;
+    }
 }
 
 #introduction .filtres div:hover {
@@ -329,11 +333,19 @@ header nav a.inscription {
     white-space: nowrap;
 }
 
+@media  only screen and (max-width: 768px) {
+    #introduction .filtres div p.texte {
+        font-size: 1.2em;
+        margin: 0px 18px 0 13px;
+    }
+}
+
 p.resultat {
     font-weight: 300;
     font-size: 1.25em;
     display: flex;
     align-items: center;
+    margin: 14px 0px 14px 0px;
 }
 
 p.resultat span {
@@ -372,11 +384,10 @@ section#hebergement .marseille,
 section#hebergement .populaire {
     background-color: #f2f2f2;
     border-radius: 20px;
-    padding: 43px 39px;
+    padding: 43px 39px 35px 39px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    box-sizing: border-box;
 }
 
 section#hebergement .marseille { width: 65.5%; }
@@ -387,7 +398,7 @@ section#hebergement .populaire { width: 31.5%; }
     section#hebergement .populaire {
         width: 100%;
         margin-right: 0px;
-        padding: 20px !important;
+        padding: 40px 20px !important;
     }
 }
 
@@ -397,6 +408,10 @@ section#hebergement .populaire { width: 31.5%; }
         border-radius: 0px !important;
         flex-wrap: nowrap;
     }
+    section#hebergement .marseille {
+        background-color: white;
+        padding-bottom: 0px !important;
+    }
 }
 
 section#hebergement h2 {
@@ -405,14 +420,21 @@ section#hebergement h2 {
     justify-content: space-between;
 }
 
-section#hebergement .marseille .ligne_01 figure,
-section#hebergement .marseille .ligne_02 figure,
+section#hebergement .marseille figure,
 section#hebergement .populaire figure {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    box-sizing: border-box;
     margin: 0px 0px 30px 0px;
+    box-shadow: 3px 3px 10px #e9e7e7;
+    border-radius: 20px 20px 20px 20px;
+}
+
+@media  only screen and (max-width: 768px) {
+    section#hebergement .marseille figure,
+    section#hebergement .populaire figure {
+        margin: 0px 0px 11px 0px;
+    }
 }
 
 section#hebergement .marseille figure figcaption,
@@ -428,7 +450,6 @@ section#hebergement .populaire figure figcaption a {
     height: 100%;
     text-decoration: none;
     color: black;
-    box-sizing: border-box;
 }
 
 section#hebergement figcaption .titre {
@@ -446,7 +467,7 @@ section#hebergement figcaption .prix {
 }
 
 section#hebergement .etoiles {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 section#hebergement .etoiles .bleu,
@@ -482,7 +503,6 @@ section#hebergement .marseille .ligne_02 figure {
     flex-basis: 31%;
 }
 
-
 section#hebergement  .marseille figure a {
     display: inline-block;
     width: 100%;
@@ -499,7 +519,6 @@ section#hebergement .marseille .ligne_02 figure a img {
     border-left: 5px solid white;
     border-bottom: none;
     border-radius: 20px 20px 0px 0px;
-    box-sizing: border-box;
 }
 
 @media  only screen and (max-width: 768px) {
@@ -525,6 +544,12 @@ section#hebergement .marseille figcaption a {
     padding: 0px !important;
 }
 
+@media  only screen and (max-width: 768px) {
+    .link-bottom {
+        margin-top: 21px;
+    }
+}
+
 .link-bottom a {
     font-size: 1.4em;
     font-weight: 700;
@@ -541,7 +566,6 @@ section#hebergement .populaire figure {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    box-sizing: border-box;
 }
 
 section#hebergement .populaire figure:last-child {
@@ -549,20 +573,19 @@ section#hebergement .populaire figure:last-child {
 }
 
 section#hebergement .populaire figure a  {
-    min-width: 128px;
+    min-width: 132px;
     height: 144px;
 }
 
 section#hebergement .populaire figure img {
-    min-width: 128px;
+    min-width: 132px;
     height: 144px;
     object-fit: cover;
     border-top: 5px solid white;
-    border-right: 5px solid white;
+    border-right: none;
     border-left: 5px solid white;
     border-bottom: 5px solid white;
     border-radius: 20px 0px 0px 20px;
-    box-sizing: border-box;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -585,10 +608,9 @@ section#hebergement .populaire figcaption {
 }
 
 section#hebergement .populaire figcaption a {
-    padding: 14px 40px 9px 21px;
+    padding: 16px 40px 9px 21px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -611,6 +633,7 @@ section#hebergement .populaire figcaption a {
 
 section#hebergement .populaire .etoiles {
     margin-top: auto;
+    margin-bottom: 4px;
 }
 
 
@@ -634,6 +657,14 @@ section#hebergement .populaire .etoiles {
 
 #activite h2 {
     width: 100%;
+    margin: 0px 0px 27px 0px;
+}
+
+@media  only screen and (max-width: 768px) {
+    #activite h2 {
+        width: 100%;
+        margin: 0px 0px 33px 0px;  
+    }
 }
 
 #activite figure {
@@ -753,7 +784,6 @@ section#hebergement .populaire .etoiles {
     padding-left: 18px;
     height: 56px;
     border-radius: 0px 0px 15px 15px;
-    box-sizing: border-box;
 }
 
 /*-------------------------------- FOOTER ----------------------------------*/
