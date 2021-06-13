@@ -8,19 +8,24 @@ body {
     font-family: raleway, arial, sans-serif;
     font-size: 0.8em;
     margin: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 header, main, footer section {
-    width: 1340px;
-    margin: auto;
+    max-width: 1380px;
+    width: 100%;
 }
 
-@media  only screen and (max-width: 1440px){
-    header, main, footer section { width: 100%; }
+header, main, footer section {
+    padding: 0px 20px;
 }
 
-@media  only screen and (max-width: 1440px) and (min-width: 768px){
-    main, header { padding: 0 20px;}
+@media  only screen and (max-width: 768px) {
+    header, main {
+        padding: 0px 0px;
+    }
 }
 
 h2 { font-size: 1.7em; }
@@ -172,7 +177,9 @@ header nav a.inscription {
 }
 
 @media  only screen and (max-width: 768px){
-    #introduction, #activite { padding: 0 20px; }
+    #introduction {
+        margin: 0px 20px 40px 20px;
+    }
 }
 
 #introduction h1 {
@@ -184,7 +191,13 @@ header nav a.inscription {
 #introduction p.intro {
     font-weight: 300;
     font-size: 1.25em;
-    margin: 14px 0px 35px 0px;
+    margin: 7px 0px 19px 0px;
+}
+
+@media  only screen and (max-width: 768px){
+    #introduction p.intro {
+        margin: 14px 0px 35px 0px;
+    }
 }
 
 /*--------- INTRODUCTION  FORM RECHERCHE---------*/
@@ -227,7 +240,8 @@ header nav a.inscription {
     color: grey;
 }
 
-#introduction form button.desktop, #introduction form button.phone {
+#introduction form button.desktop, 
+#introduction form button.phone {
     border: none;
     background-color: #0065fc;
     color: white;
@@ -340,7 +354,9 @@ header nav a.inscription {
     }
 }
 
-p.resultat {
+/*--------- INTRODUCTION RESULTAT ---------*/
+
+#introduction p.resultat {
     font-weight: 300;
     font-size: 1.25em;
     display: flex;
@@ -348,7 +364,7 @@ p.resultat {
     margin: 14px 0px 14px 0px;
 }
 
-p.resultat span {
+#introduction p.resultat span {
     display: inline-block;
     border: 1px solid #d9d9d9;
     min-width: 22px;
@@ -360,14 +376,14 @@ p.resultat span {
     margin: 0px 14px 0px 5px;
 }
 
-p.resultat span i {
+#introduction p.resultat span i {
     color: #0065fc;
     font-size: 0.75em;
 }
 
 /*-------------------------------- HEBERGEMENT ----------------------------------*/
 
-section#hebergement {
+#hebergement {
     display: flex;
     flex-direction: row;
     margin-bottom: 65px;
@@ -375,13 +391,13 @@ section#hebergement {
 }
 
 @media  only screen and (max-width: 1024px){
-    section#hebergement { flex-direction: column-reverse; } 
+    #hebergement { flex-direction: column-reverse; } 
 }
 
 /*--------- HEBERGEMENT  MARSEILLE AND POPULAIRE COMMUN ---------*/
 
-section#hebergement .marseille, 
-section#hebergement .populaire {
+#hebergement .marseille, 
+#hebergement .populaire {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 43px 39px 35px 39px;
@@ -390,12 +406,19 @@ section#hebergement .populaire {
     flex-wrap: wrap;
 }
 
-section#hebergement .marseille { width: 65.5%; }
-section#hebergement .populaire { width: 31.5%; }
+#hebergement .marseille { width: 65.5%; }
+#hebergement .populaire { width: 31.5%; }
+
+@media  only screen and (max-width: 1280px) {
+    #hebergement .marseille, 
+    #hebergement .populaire {
+        padding: 40px 20px !important;
+    }
+}
 
 @media  only screen and (max-width: 1024px) {
-    section#hebergement .marseille, 
-    section#hebergement .populaire {
+    #hebergement .marseille, 
+    #hebergement .populaire {
         width: 100%;
         margin-right: 0px;
         padding: 40px 20px !important;
@@ -403,25 +426,25 @@ section#hebergement .populaire { width: 31.5%; }
 }
 
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille, 
-    section#hebergement .populaire {
+    #hebergement .marseille, 
+    #hebergement .populaire {
         border-radius: 0px !important;
         flex-wrap: nowrap;
     }
-    section#hebergement .marseille {
+    #hebergement .marseille {
         background-color: white;
         padding-bottom: 0px !important;
     }
 }
 
-section#hebergement h2 {
+#hebergement h2 {
     margin: 0px 0px 24px 0px;
     display: flex;
     justify-content: space-between;
 }
 
-section#hebergement .marseille figure,
-section#hebergement .populaire figure {
+#hebergement .marseille figure,
+#hebergement .populaire figure {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -431,86 +454,112 @@ section#hebergement .populaire figure {
 }
 
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille figure,
-    section#hebergement .populaire figure {
+    #hebergement .marseille figure,
+    #hebergement .populaire figure {
         margin: 0px 0px 11px 0px;
     }
 }
 
-section#hebergement .marseille figure figcaption,
-section#hebergement .populaire figure figcaption {
+#hebergement .marseille figure figcaption,
+#hebergement .populaire figure figcaption {
     background-color: white;
     margin: 0px;
     color: black;
 }
 
-section#hebergement .marseille figure figcaption a,
-section#hebergement .populaire figure figcaption a {
+#hebergement .marseille figure figcaption a,
+#hebergement .populaire figure figcaption a {
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: black;
 }
 
-section#hebergement figcaption .titre {
+#hebergement figcaption .titre {
     font-weight: 700;
     font-size: 1.25em;
     margin-bottom: 6px;
     display: block;
 }
 
-section#hebergement figcaption .prix {
+@media  only screen and (max-width: 1280px) {
+    #hebergement figcaption .titre {
+        font-size: 1.1em;
+        line-height: 1em;
+    }
+}
+
+@media  only screen and (max-width: 768px) {
+    #hebergement figcaption .titre {
+        font-size: 1.25em;
+        line-height: unset;
+    }
+}
+
+#hebergement figcaption .prix {
     font-weight: 400;
     display: block;
     margin-bottom: 6px;
     font-size: 1.1em;
 }
 
-section#hebergement .etoiles {
+@media  only screen and (max-width: 1280px) {
+    #hebergement figcaption .prix {
+        font-size: 1em;
+    }
+}
+
+@media  only screen and (max-width: 768px) {
+    #hebergement figcaption .prix {
+        font-size: 1.1em;
+    }
+}
+
+#hebergement .etoiles {
     font-size: 0.9em;
 }
 
-section#hebergement .etoiles .bleu,
-section#hebergement .etoiles .bleu {
+#hebergement .etoiles .bleu,
+#hebergement .etoiles .bleu {
     color: #0065fc;
 }
 
-section#hebergement figcaption .etoiles .grise,
-section#hebergement figcaption .etoiles .grise {
+#hebergement figcaption .etoiles .grise,
+#hebergement figcaption .etoiles .grise {
     color: #d9d9d9;
 }
 
 /*--------- HEBERGEMENT  MARSEILLE---------*/
 
-section#hebergement .marseille .ligne_01, 
-section#hebergement .marseille .ligne_02 {
+#hebergement .marseille .ligne_01, 
+#hebergement .marseille .ligne_02 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille .ligne_01, 
-    section#hebergement .marseille .ligne_02 {
+    #hebergement .marseille .ligne_01, 
+    #hebergement .marseille .ligne_02 {
         flex-direction: column;
     }
 }
 
-section#hebergement .marseille .ligne_01 figure, 
-section#hebergement .marseille .ligne_02 figure {
+#hebergement .marseille .ligne_01 figure, 
+#hebergement .marseille .ligne_02 figure {
     height: 200px;
     width: 100%;
     flex-basis: 31%;
 }
 
-section#hebergement  .marseille figure a {
+#hebergement  .marseille figure a {
     display: inline-block;
     width: 100%;
     height: 119px;
 }
 
-section#hebergement .marseille .ligne_01 figure a img,
-section#hebergement .marseille .ligne_02 figure a img {
+#hebergement .marseille .ligne_01 figure a img,
+#hebergement .marseille .ligne_02 figure a img {
     width: 100%;
     height: 119px;
     object-fit: cover;
@@ -522,20 +571,20 @@ section#hebergement .marseille .ligne_02 figure a img {
 }
 
 @media  only screen and (max-width: 768px) {
-    section#hebergement .marseille figure {
+    #hebergement .marseille figure {
         width: 100%;
     }
 }
 
 @media  only screen and (max-width: 1024px) {
-    section#hebergement .marseille { margin-right: 0px; width: 100%;}
+    #hebergement .marseille { margin-right: 0px; width: 100%;}
 }
 
-section#hebergement .marseille figcaption {
+#hebergement .marseille figcaption {
     border-radius: 0px 0px 20px 20px;
 }
 
-section#hebergement .marseille figcaption a {
+#hebergement .marseille figcaption a {
     padding: 7px 12px 9px 17px;
 }
 
@@ -560,7 +609,7 @@ section#hebergement .marseille figcaption a {
 
 /*--------- HEBERGEMENT  POPULAIRE ---------*/
 
-section#hebergement .populaire figure {
+#hebergement .populaire figure {
     height: 144px;
     width: 100%;
     display: flex;
@@ -568,17 +617,29 @@ section#hebergement .populaire figure {
     justify-content: flex-end;
 }
 
-section#hebergement .populaire figure:last-child {
+#hebergement .populaire figure:last-child {
     margin-bottom: 0px;
 }
 
-section#hebergement .populaire figure a  {
-    min-width: 132px;
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    #hebergement .populaire figure {
+        margin-bottom: 0px;
+    }
+}
+
+#hebergement .populaire figure a  {
+    width: 132px;
     height: 144px;
 }
 
-section#hebergement .populaire figure img {
-    min-width: 132px;
+@media  only screen and (min-width: 768px) and (max-width: 1280px) {
+    #hebergement .populaire figure a  {
+        width: 112px;
+    }
+}
+
+#hebergement .populaire figure img {
+    width: 132px;
     height: 144px;
     object-fit: cover;
     border-top: 5px solid white;
@@ -588,50 +649,56 @@ section#hebergement .populaire figure img {
     border-radius: 20px 0px 0px 20px;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    section#hebergement .populaire h2 {width: 100%;}
-    section#hebergement .populaire figure { width: 32%; }
+@media  only screen and (min-width: 768px) and (max-width: 1280px) {
+    #hebergement .populaire figure img  {
+        width: 112px;
+    }
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    section#hebergement .populaire {
+    #hebergement .populaire h2 {width: 100%;}
+    #hebergement .populaire figure { width: 31%; }
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    #hebergement .populaire {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 30px;
     }
 }
 
-section#hebergement .populaire figcaption {
+#hebergement .populaire figcaption {
     height: 100%;
     width: 100%;
     border-radius: 0px 20px 20px 0px;
 }
 
-section#hebergement .populaire figcaption a {
+#hebergement .populaire figcaption a {
     padding: 16px 40px 9px 21px;
     display: flex;
     flex-direction: column;
 }
 
 @media  only screen and (min-width: 768px) and (max-width: 1024px) {
-    section#hebergement .populaire figcaption a {
+    #hebergement .populaire figcaption a {
         padding: 10px;
     }
 }
 
-@media  only screen and (min-width: 1024px) and (max-width: 1440px) {
-    section#hebergement .populaire figcaption a {
+@media  only screen and (min-width: 1024px) and (max-width: 1280) {
+    #hebergement .populaire figcaption a {
         padding: 14px 21px 9px 21px;
     }
 }
 
 @media  only screen and (max-width: 768px) {
-    section#hebergement .populaire figcaption  {
+    #hebergement .populaire figcaption  {
         width: 100%;
     }
 }
 
-section#hebergement .populaire .etoiles {
+#hebergement .populaire .etoiles {
     margin-top: auto;
     margin-bottom: 4px;
 }
@@ -652,6 +719,7 @@ section#hebergement .populaire .etoiles {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0px 20px;
     }
 }
 
@@ -671,7 +739,7 @@ section#hebergement .populaire .etoiles {
     margin: 0px;
 }
 
-@media  only screen and (min-width: 1440px) {
+@media  only screen and (min-width: 1280px) {
     #activite .block1, 
     #activite .colonne, 
     #activite .block4 {
@@ -723,12 +791,7 @@ section#hebergement .populaire .etoiles {
 }
 
 @media  only screen and (max-width: 768px) {
-    #activite .block1, 
-    #activite .block2, 
-    #activite .block3, 
-    #activite .block4, 
-    #activite .block5, 
-    #activite .block6 {
+    #activite figure {
         margin-bottom: 25px;
     }
 }
@@ -791,6 +854,8 @@ footer {
     width: 100%;
     background-color: #f2f2f2;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 footer section {
@@ -802,7 +867,7 @@ footer section {
     padding: 50px 0px;
 }
 
-@media  only screen and (max-width: 1440px) {
+@media  only screen and (max-width: 1280px) {
     footer section {
         padding: 50px 20px;
     } 
@@ -834,7 +899,7 @@ footer section div ul:nth-child(2) {
     margin-right: 70px;
 }
 
-@media  only screen and (min-width: 1440px) {
+@media  only screen and (min-width: 1280px) {
     footer section div ul:first-child, 
 footer section div ul:nth-child(2) {
     margin-right: 230px;
