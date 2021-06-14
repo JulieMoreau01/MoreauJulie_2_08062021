@@ -1,0 +1,68 @@
+/*-------------------------------- FOOTER ----------------------------------*/
+footer {
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #f2f2f2;
+    padding: 0px;
+    padding: 50px 0px;
+}
+
+@media  only screen and (max-width: 1280px) {
+    footer section {
+        padding: 50px 20px;
+    } 
+}
+
+@media  only screen and (max-width: 768px) {
+    footer section { flex-direction: column; }  
+}
+
+footer section div h3 {
+    font-weight: 600;
+    margin-top: 0px;
+    font-size: 1.4em;
+}
+
+footer section div ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media  only screen and (max-width: 768px) {
+    footer section div ul {
+        margin-bottom: 42px;
+    }
+}
+
+footer section div ul:first-child, 
+footer section div ul:nth-child(2) {
+    margin-right: 70px;
+}
+
+@media  only screen and (min-width: 1280px) {
+    footer section div ul:first-child, 
+footer section div ul:nth-child(2) {
+    margin-right: 230px;
+} 
+}
+
+footer section div ul li {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+footer section div ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25em;
+}
