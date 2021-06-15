@@ -2,9 +2,15 @@
 footer {
     width: 100%;
     background-color: #f2f2f2;
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
+}
+
+@media  only screen and (max-width: 768px) {
+    footer {
+        margin-top: 40px;
+    }
 }
 
 footer section {
@@ -12,14 +18,12 @@ footer section {
     flex-direction: row;
     justify-content: flex-start;
     background-color: #f2f2f2;
-    padding: 0px;
-    padding: 50px 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @media  only screen and (max-width: 1280px) {
-    footer section {
-        padding: 50px 20px;
-    } 
+    footer section { padding: 50px 20px; } 
 }
 
 @media  only screen and (max-width: 768px) {
@@ -29,7 +33,6 @@ footer section {
 footer section div h3 {
     font-weight: 600;
     margin-top: 0px;
-    font-size: 1.4em;
 }
 
 footer section div ul {
@@ -38,9 +41,7 @@ footer section div ul {
 }
 
 @media  only screen and (max-width: 768px) {
-    footer section div ul {
-        margin-bottom: 42px;
-    }
+    footer section div ul { margin-bottom: 42px; }
 }
 
 footer section div ul:first-child, 
@@ -50,9 +51,16 @@ footer section div ul:nth-child(2) {
 
 @media  only screen and (min-width: 1280px) {
     footer section div ul:first-child, 
-footer section div ul:nth-child(2) {
-    margin-right: 230px;
-} 
+    footer section div ul:nth-child(2) {
+        margin-right: 230px;
+    }
+}
+
+@media  only screen and (max-width: 768px) {
+    footer section div ul:first-child, 
+    footer section div ul:nth-child(2) {
+        margin-right: 0px !important;
+    }
 }
 
 footer section div ul li {

@@ -81,6 +81,13 @@ header nav ul li a {
     margin-bottom: 22px;
 }
 
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav ul li a {
+        margin-bottom: 0px;
+    }
+}
+
+
 header nav ul li a:hover {
     color: #0065fc;
 }
@@ -129,11 +136,17 @@ header nav a.inscription {
     padding-bottom: 22px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     header nav a.inscription {
         margin: 7px 20px 37px 20px;
         list-style: none;
         padding-bottom: 0px;
         border-top: none;
+    }
+}
+
+@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav a.inscription {
+        padding-bottom: 0px;
     }
 }
