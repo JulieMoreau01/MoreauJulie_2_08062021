@@ -7,7 +7,7 @@ footer {
     justify-content: center;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     footer {
         margin-top: 40px;
     }
@@ -22,11 +22,11 @@ footer section {
     padding-bottom: 50px;
 }
 
-@media  only screen and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     footer section { padding: 50px 20px; } 
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     footer section { flex-direction: column; }  
 }
 
@@ -40,7 +40,7 @@ footer section div ul {
     padding: 0px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     footer section div ul { margin-bottom: 42px; }
 }
 
@@ -49,14 +49,14 @@ footer section div ul:nth-child(2) {
     margin-right: 70px;
 }
 
-@media  only screen and (min-width: 1280px) {
+@media all and (min-width: 1280px) {
     footer section div ul:first-child, 
     footer section div ul:nth-child(2) {
         margin-right: 230px;
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     footer section div ul:first-child, 
     footer section div ul:nth-child(2) {
         margin-right: 0px !important;

@@ -5,7 +5,7 @@
     margin: 0px 0px 40px 0px;
 }
 
-@media  only screen and (max-width: 768px){
+@media all and (max-width: 768px){
     #introduction {
         margin: 0px 20px 40px 20px;
     }
@@ -22,7 +22,7 @@
     margin: 7px 0px 19px 0px;
 }
 
-@media  only screen and (max-width: 768px){
+@media all and (max-width: 768px){
     #introduction p.intro {
         margin: 14px 0px 35px 0px;
     }
@@ -40,7 +40,7 @@
     border-bottom: 1px solid #f2f2f2;
 }
 
-@media  only screen and (max-width: 768px){
+@media all and (max-width: 768px){
     #introduction form { width: 100%; }   
 }
 
@@ -85,7 +85,7 @@
     display: none;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #introduction form button.phone {
         display: block;
         border-radius: 15px;
@@ -112,7 +112,7 @@
     margin: 0px 33px 15px 10px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #introduction .filtres p.titre {
         width: 100%;
         margin-bottom: 18px;
@@ -133,7 +133,7 @@
     cursor: pointer;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #introduction .filtres div {
         margin-right: 10px;
     }
@@ -175,7 +175,7 @@
     white-space: nowrap;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #introduction .filtres div p.texte {
         font-size: 1.2em;
         margin: 0px 18px 0 13px;
@@ -218,7 +218,7 @@
     justify-content: space-between;
 }
 
-@media  only screen and (max-width: 1024px){
+@media all and (max-width: 1024px){
     #hebergement { flex-direction: column-reverse; } 
 }
 
@@ -237,14 +237,14 @@
 #hebergement .marseille { width: 65.5%; }
 #hebergement .populaire { width: 31.5%; }
 
-@media  only screen and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     #hebergement .marseille, 
     #hebergement .populaire {
         padding: 40px 20px !important;
     }
 }
 
-@media  only screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     #hebergement .marseille, 
     #hebergement .populaire {
         width: 100%;
@@ -253,7 +253,7 @@
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement .marseille, 
     #hebergement .populaire {
         border-radius: 0px !important;
@@ -280,7 +280,7 @@
     border-radius: 20px 20px 20px 20px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement .marseille figure,
     #hebergement .populaire figure {
         margin: 0px 0px 11px 0px;
@@ -309,14 +309,14 @@
     display: block;
 }
 
-@media  only screen and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     #hebergement figcaption .titre {
         font-size: 1.1em;
         line-height: 1em;
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement figcaption .titre {
         font-size: 1.25em;
         line-height: unset;
@@ -330,13 +330,13 @@
     font-size: 1.1em;
 }
 
-@media  only screen and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     #hebergement figcaption .prix {
         font-size: 1em;
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement figcaption .prix {
         font-size: 1.1em;
     }
@@ -365,7 +365,7 @@
     justify-content: space-between;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement .marseille .ligne_01, 
     #hebergement .marseille .ligne_02 {
         flex-direction: column;
@@ -385,7 +385,7 @@
     height: 119px;
 }
 
-@media  only screen and (max-width: 768px) and (min-width: 375px) {
+@media all and (max-width: 768px) and (min-width: 376px) {
     #hebergement  .marseille figure a {
         height: 158px;
     }
@@ -401,22 +401,23 @@
     border-left: 5px solid white;
     border-bottom: none;
     border-radius: 20px 20px 0px 0px;
+    display: inline-block;
 }
 
-@media  only screen and (max-width: 768px) and (min-width: 375px) {
+@media all and (max-width: 768px) and (min-width: 376px) {
     #hebergement .marseille .ligne_01 figure a img,
     #hebergement .marseille .ligne_02 figure a img {
         height: 158px;
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #hebergement .marseille figure {
         width: 100%;
     }
 }
 
-@media  only screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     #hebergement .marseille { margin-right: 0px; width: 100%;}
 }
 
@@ -433,7 +434,7 @@
     padding: 0px !important;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     .link-bottom {
         margin-top: 21px;
     }
@@ -449,7 +450,7 @@
 
 /*--------- HEBERGEMENT  POPULAIRE ---------*/
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     #hebergement .populaire {
         flex-direction: row;
         justify-content: space-between;
@@ -469,7 +470,7 @@
     margin-bottom: 0px;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     #hebergement .populaire figure {
         margin-bottom: 0px;
     }
@@ -480,7 +481,7 @@
     height: 144px;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1280px) {
+@media all and (min-width: 769px) and (max-width: 1280px) {
     #hebergement .populaire figure a  {
         width: 112px;
     }
@@ -497,13 +498,13 @@
     border-radius: 20px 0px 0px 20px;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1280px) {
+@media all and (min-width: 769px) and (max-width: 1280px) {
     #hebergement .populaire figure img  {
         width: 112px;
     }
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     #hebergement .populaire h2 {width: 100%;}
     #hebergement .populaire figure { width: 31%; }
 }
@@ -514,27 +515,31 @@
     border-radius: 0px 20px 20px 0px;
 }
 
+@media all and (max-width: 769px) {
+    #hebergement .populaire figcaption  { width: 100%; }
+}
+
 #hebergement .populaire figcaption a {
     padding: 16px 40px 9px 21px;
     display: flex;
     flex-direction: column;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+@media all and (max-width: 374px) {
     #hebergement .populaire figcaption a {
         padding: 10px;
     }
 }
 
-@media  only screen and (min-width: 1024px) and (max-width: 1280) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     #hebergement .populaire figcaption a {
-        padding: 14px 21px 9px 21px;
+        padding: 10px;
     }
 }
 
-@media  only screen and (max-width: 768px) {
-    #hebergement .populaire figcaption  {
-        width: 100%;
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    #hebergement .populaire figcaption a {
+        padding: 14px 21px 9px 21px;
     }
 }
 
@@ -542,7 +547,6 @@
     margin-top: auto;
     margin-bottom: 4px;
 }
-
 
 /*-------------------------------- ACTIVITE ----------------------------------*/
 
@@ -553,7 +557,7 @@
     justify-content: space-between;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #activite  {
         display: flex;
         flex-direction: column;
@@ -568,7 +572,7 @@
     margin: 0px 0px 21px 0px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #activite h2 {
         width: 100%;
         margin: 0px 0px 33px 0px;  
@@ -579,7 +583,7 @@
     margin: 0px;
 }
 
-@media  only screen and (min-width: 1280px) {
+@media all and (min-width: 1280px) {
     #activite .block1, 
     #activite .colonne, 
     #activite .block4 {
@@ -595,7 +599,7 @@
     flex-basis: 22.5%;
 }
 
-@media  only screen and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     #activite .block1, 
     #activite .colonne, 
     #activite .block4 {
@@ -623,7 +627,7 @@
     margin-bottom: 44px;
 }
 
-@media  only screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     #activite .block2, 
     #activite .block5 {
         margin-bottom: 15px;
@@ -631,9 +635,9 @@
     }
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #activite figure {
-        margin-bottom: 25px;
+        margin-bottom: 25px !important;
     }
 }
 
@@ -663,7 +667,7 @@
     max-height: 138px;
 }
 
-@media  only screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     #activite .block5 img {
         max-height: 180px;
     }
@@ -673,14 +677,14 @@
     max-height: 152px;
 }
 
-@media  only screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     #activite figure img,
     #activite figure a {
         max-height: 134px !important;
     }
 }
 
-@media  only screen and (max-width: 768px) and (min-width: 375px) {
+@media all and (max-width: 768px) and (min-width: 376px) {
     #activite figure img,
     #activite figure a {
         max-height: 182px !important;
@@ -703,7 +707,7 @@
     border-radius: 0px 0px 15px 15px;
 }
 
-@media  only screen and (max-width: 1280px) {
+@media all and (min-width: 769px) and  (max-width: 1280px) {
     #activite figure figcaption a {
         font-size: 1.1em;
     }
