@@ -79,6 +79,7 @@
     font-weight: 500;
     padding: 0px 17px;
     cursor: pointer;
+    margin: 0px;
 }
 
 #introduction form button.phone {
@@ -231,8 +232,8 @@
     flex-wrap: wrap;
 }
 
-#hebergement .marseille { width: 65.5%; }
-#hebergement .populaire { width: 31.5%; }
+#hebergement .marseille { flex-basis: 65.5%; }
+#hebergement .populaire { flex-basis: 31.5%; }
 
 @media all and (max-width: 1280px) {
     #hebergement .marseille, 
@@ -368,13 +369,12 @@
 }
 
 #hebergement .marseille figure {
-    height: 200px;
+    height: min-content;
     flex-basis: 31%;
 }
 
 #hebergement  .marseille figure a {
     display: inline-block;
-    flex-basis: 100%;
     height: 119px;
 }
 
@@ -547,10 +547,7 @@
 
 @media all and (max-width: 768px) {
     #activite  {
-        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
         margin: 0px 20px;
     }
 }
@@ -562,37 +559,7 @@
 
 @media all and (max-width: 768px) {
     #activite h2 {
-        width: 100%;
         margin: 0px 0px 33px 0px;  
-    }
-}
-
-#activite figure {
-    margin: 0px;
-}
-
-@media all and (min-width: 1280px) {
-    #activite .block1, 
-    #activite .colonne, 
-    #activite .block4 {
-        min-width: 300px;
-        width: 300px;
-    }
-}
-
-#activite .block1, 
-#activite .colonne, 
-#activite .block4 {
-    height: 446px;
-    flex-basis: 22.5%;
-}
-
-@media all and (min-width: 769px) and (max-width: 1024px) {
-    #activite .block1, 
-    #activite .colonne, 
-    #activite .block4 {
-    height: 416px;
-    flex-basis: 22.5%;
     }
 }
 
@@ -600,91 +567,81 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    object-fit: cover;
+    height: 446px;
+    flex-basis: 22.6%;
+}
+
+@media all and (max-width: 768px) {
+    #activite .colonne  {
+        height: unset;
+        flex-basis: unset;
+    }
 }
 
 #activite figure {
-    border-radius: 20px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
     box-shadow: 3px 3px 10px #e9e7e7;
 }
 
-#activite .block2, 
-#activite .block5 {
-    margin-bottom: 44px;
-}
-
-@media all and (max-width: 1024px) {
-    #activite .block2, 
-    #activite .block5 {
-        margin-bottom: 15px;
-        height: 100%;
-    }
-}
-
 @media all and (max-width: 768px) {
-    #activite figure {
-        margin-bottom: 25px !important;
+    #activite figure  {
+        margin-bottom: 25px;
     }
 }
 
-#activite a {
-    text-decoration: none;
-    color: black;
-    display: flex;
+#activite figure.block1, figure.block4 {
+    flex-basis: 100%;
 }
 
-#activite figure img,
-#activite figure a {
+#activite figure.block2 {
+    flex-basis: 53%;
+}
+
+#activite figure.block3 {
+    flex-basis: 37%;
+}
+
+#activite figure.block5 {
+    flex-basis: 43%;
+}
+
+#activite figure.block6 {
+    flex-basis: 47%;
+}
+
+#activite figure > a {
     width: 100%;
-    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#activite figure > a img {
+    width: 100%;
+    height: 1px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
-}
-
-#activite .block2 img {
-    max-height: 180px;
-}
-
-#activite .block3 img {
-    max-height: 108px;
-}
-
-#activite .block5 img {
-    max-height: 138px;
-}
-
-@media all and (max-width: 1024px) {
-    #activite .block5 img {
-        max-height: 180px;
-    }
-}
-
-#activite .block6 img {
-    max-height: 152px;
+    flex-grow: 1;
 }
 
 @media all and (max-width: 768px) {
-    #activite figure img,
-    #activite figure a {
-        max-height: 134px !important;
-    }
-}
-
-@media all and (max-width: 768px) and (min-width: 376px) {
-    #activite figure img,
-    #activite figure a {
-        max-height: 182px !important;
+    #activite figure > a img  {
+        min-height: 134px;
     }
 }
 
 #activite figure figcaption {
     border-radius: 0px 0px 20px 20px;
+    height: 56px;
+    background-color: white;
 }
 
 #activite figure figcaption a {
-    background-color: white;
     font-size: 1.25em;
     font-weight: 700;
     display: flex;
@@ -693,10 +650,6 @@
     padding: 0px 10px 0px 18px;
     height: 56px;
     border-radius: 0px 0px 15px 15px;
-}
-
-@media all and (min-width: 769px) and  (max-width: 1280px) {
-    #activite figure figcaption a {
-        font-size: 1.1em;
-    }
+    text-decoration: none;
+    color: black;
 }

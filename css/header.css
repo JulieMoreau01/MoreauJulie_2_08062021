@@ -72,6 +72,10 @@ header nav ul li {
     align-items: center;
 }
 
+header nav ul li.inscription {
+    padding-right: 0px;
+}
+
 header nav ul li:first-child {
     order: 1;
 }
@@ -97,11 +101,9 @@ header nav ul li:hover a {
     header nav ul li:first-child {
         order: 2;
     }
-    
     header nav ul li:nth-child(2) {
         order: 3;
     }
-    
     header nav ul li:nth-child(3) {
         order: 1;
         width: 100%;
