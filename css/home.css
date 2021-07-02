@@ -131,6 +131,8 @@
     margin-right: 25px;
     margin-bottom: 12px;
     cursor: pointer;
+    background-color: white;
+    transition: all 400ms;
 }
 
 @media all and (max-width: 768px) {
@@ -144,12 +146,7 @@
     border-bottom: 2px solid #deebff;
     border-right: 2px solid #deebff;
     background-color: #deebff;
-    transition: 0.8s;
     box-shadow: 2px 2px 2px #d9d9d9;
-}
-
-#introduction .filtres div:not(:hover) {
-    transition: 0.8s;
 }
 
 #introduction .filtres p.icone {
@@ -358,30 +355,26 @@
 
 /*--------- HEBERGEMENT  MARSEILLE---------*/
 
-#hebergement .marseille .ligne_01, 
-#hebergement .marseille .ligne_02 {
+#hebergement .marseille  {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 @media all and (max-width: 768px) {
-    #hebergement .marseille .ligne_01, 
-    #hebergement .marseille .ligne_02 {
+    #hebergement .marseille  {
         flex-direction: column;
     }
 }
 
-#hebergement .marseille .ligne_01 figure, 
-#hebergement .marseille .ligne_02 figure {
+#hebergement .marseille figure {
     height: 200px;
-    width: 100%;
     flex-basis: 31%;
 }
 
 #hebergement  .marseille figure a {
     display: inline-block;
-    width: 100%;
+    flex-basis: 100%;
     height: 119px;
 }
 
@@ -391,8 +384,7 @@
     }
 }
 
-#hebergement .marseille .ligne_01 figure a img,
-#hebergement .marseille .ligne_02 figure a img {
+#hebergement .marseille figure a img {
     width: 100%;
     height: 119px;
     object-fit: cover;
@@ -405,15 +397,14 @@
 }
 
 @media all and (max-width: 768px) and (min-width: 376px) {
-    #hebergement .marseille .ligne_01 figure a img,
-    #hebergement .marseille .ligne_02 figure a img {
+    #hebergement .marseille figure a img {
         height: 158px;
     }
 }
 
 @media all and (max-width: 768px) {
     #hebergement .marseille figure {
-        width: 100%;
+        flex-basis: 100%;
     }
 }
 
@@ -432,12 +423,11 @@
 .link-bottom {
     margin: 0px;
     padding: 0px !important;
+    width: 100%;
 }
 
 @media all and (max-width: 768px) {
-    .link-bottom {
-        margin-top: 21px;
-    }
+    .link-bottom {margin-top: 21px;}
 }
 
 .link-bottom a {
@@ -471,9 +461,7 @@
 }
 
 @media all and (min-width: 769px) and (max-width: 1024px) {
-    #hebergement .populaire figure {
-        margin-bottom: 0px;
-    }
+    #hebergement .populaire figure { margin-bottom: 0px;}
 }
 
 #hebergement .populaire figure a  {

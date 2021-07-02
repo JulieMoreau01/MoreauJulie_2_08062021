@@ -15,19 +15,19 @@ header {
 
 /*--------- HEADER LOGO---------*/
 
-header p  {
+header figure  {
     margin: 0px;
 }
 
 @media all and (max-width: 768px) {
-    header p  {
+    header figure  {
         position: absolute;
         top: 33px;
         left: 20px;
     }
 }
 
-header p img {
+header figure img {
     width: 94px;
 }
 
